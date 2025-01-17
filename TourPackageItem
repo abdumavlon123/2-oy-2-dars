@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'tour_package_item.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Air Travel App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Tour Packages'),
+        ),
+        body: Center(
+          child: TourPackageItem(
+            title: 'Getting to know Basic widgets in Flutter',
+            description: 'Introducing MaterialApp and CupertinoApp widgets. Work with Scaffold widget, AppBar, SizedBoxes. Working with Text, IconButton, Icon widgets. The TextStyle class and its uses.',
+          ),
+        ),
+      ),
+    );
+  }
+}
